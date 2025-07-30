@@ -11,7 +11,6 @@ void loop() {
   int moisture = analogRead(MOISTURE_PIN);
   if (moisture <= moistureThreshold) {
     Serial.println("Feed Me! " + String(moisture));
-    // Flash the LED 3 times
     for (int i = 0; i < 3; i++) {
       digitalWrite(LED_PIN, HIGH);
       delay(200);
